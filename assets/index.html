@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Foodgram</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div id="navbar">
+        <a href="#home" id="logo">Foodgram</a>
+        <a href="#profile" id="prof" onclick="openNav()">Profile</a>
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Profile</a>
+        <a href="#">Saved</a>
+        <a href="#">Settings</a>
+    </div>
+    <div class="content">
+        <h2>website foundation with a navbar and a side menu</h2>
+    </div>
+
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+    </script>
+</body>
+</html>
