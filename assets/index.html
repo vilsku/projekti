@@ -6,19 +6,36 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-    <div id="navbar">
+    <div class="container">
+        <div id="navbar">
         <a href="#home" id="logo">Foodgram</a>
         <a href="#profile" id="prof" onclick="openNav()">Profile</a>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Profile</a>
+            <a href="#">Saved</a>
+            <a href="#">Settings</a>
+        </div>
+        <div class="content">
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="img/kuva1.jpg" style="width: 100%;">
+                <img src="img/kuva2.jpg" style="width: 100%;">
+                <img src="img/kuva3.jpg" style="width: 100%;">
+            </div>
+            <div class="column">
+                <img src="img/kuva4.jpg" style="width: 100%;">
+                <img src="img/kuva5.jpg" style="width: 100%;">
+                <img src="img/kuva6.jpg" style="width: 100%;">
+            </div>
+        </div>
     </div>
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">Profile</a>
-        <a href="#">Saved</a>
-        <a href="#">Settings</a>
-    </div>
-    <div class="content">
-        <h2>website foundation with a navbar and a side menu</h2>
-    </div>
+
+    <footer>
+
+    </footer>
 
     <script>
       function openNav() {
