@@ -10,8 +10,10 @@
 <div class="main">
     <div id="navbar">
         <a href="#home" id="logo" onclick="topFunction()">Foodgram</a>
-        <input type="text" placeholder="Search.." name="search" id="search">
-        <button id="searchBtn">Search</button>
+        <div class="search-container">
+            <input type="text" placeholder="Search.." name="search" id="search">
+            <button id="searchBtn">Search</button>
+        </div>
     </div>
     <div class="addPicture">
         <form action="http://localhost:3000/img"
@@ -19,14 +21,14 @@
               class="light-border"
               enctype="multipart/form-data"
               id="addImageForm">
-            <input class="light-border" type="file" name="image" placeholder="Choose file">
-            <button class="light-border" type="submit">Upload</button>
-            <input type="text" placeholder="name" name="name" required>
+            <input class="light-border" type="file" name="image" placeholder="Choose file" style="background: #ddd; font-size: 17px; border: none; cursor: pointer;">
+            <p><input type="text" placeholder="Title" name="name" required id="title"></p>
             <h6>Tags</h6>
-            <input type="text" placeholder="tag" name="tag1" required>
-            <input type="text" placeholder="tag" name="tag2" required>
-            <input type="text" placeholder="tag" name="tag3" required>
-            <button type="reset">reset</button>
+            <input type="text" placeholder="Tag" name="tag1" required class="tagbox">
+            <input type="text" placeholder="Tag" name="tag2" required class="tagbox">
+            <input type="text" placeholder="Tag" name="tag3" required class="tagbox">
+            <button type="reset">Reset tags</button>
+            <p><button class="light-border" type="submit">Upload</button></p>
         </form>
     </div>
     <div class="container">

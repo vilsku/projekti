@@ -56,7 +56,7 @@ const img_search_get = async (req, res) => {
 const img_list_get = async (req, res) => {
     const imgs = async () => {
         try {
-            const [rows] = await promisePool.query('SELECT * FROM images');
+            const [rows] = await promisePool.query('SELECT * FROM images ORDER BY img_id DESC');
             return (rows);
         } catch (e) {
             console.log('error', e.message);

@@ -15,12 +15,13 @@ body {
 .main {
     display: flex;
     flex-direction: column;
+    background-color: #F6F6F8;
 }
 
 
 #navbar {
     overflow: hidden;
-    background-color: #DEF2F1;
+    background-color: #373A36;
     position: fixed;
     top: 0;
     width: 100%;
@@ -29,7 +30,7 @@ body {
 #logo {
     float: left;
     display: block;
-    color: #2B7A78;
+    color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -38,7 +39,45 @@ body {
 #navbar a:hover {
     background: #3AAFA9;
     color: black;
+    text-align: center;
 }
+
+#navbar input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
+#navbar .search-container #searchBtn {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+#navbar .search-container #searchBtn:hover {
+    background: lightslategray;
+}
+.addPicture input {
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.addPicture button {
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
 .flex-container {
     padding: 0;
     margin: 0;
@@ -52,13 +91,12 @@ body {
 
     -webkit-flex-flow: row wrap;
     justify-content: center;
+    align-items: flex-start;
 
 }
 .flex-item {
-    padding: 5px;
     width: 200px;
-    height: 150px;
-    margin-top: 10px;
+    margin-top: 1%;
 }
 .row {
     margin-left: 15%;
@@ -75,18 +113,15 @@ body {
 
 
 ul {
-    margin: 0;
-    padding: 0;
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
 }
 
 li {
-    width: 500px;
-    margin: .2em;
+    width: 50%;
+    height: 50%;
 }
-
 li img {
     width: 100%;
 }
@@ -99,7 +134,21 @@ p {
 }
 
 
-@media screen and (max-height: 450px) {
 
+@media screen and (max-height: 500px) {
+    #navbar .search-container {
+        float: none;
+    }
+    #navbar a, .topnav input[type=text], #navbar .search-container #searchBtn {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+    #navbar input[type=text] {
+        border: 1px solid #ccc;
+    }
 }
 
