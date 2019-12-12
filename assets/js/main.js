@@ -9,7 +9,7 @@ const getImg = async () => {
   const imgs = await response.json();
   for (const img of imgs) {
     ul.innerHTML += `
-    <li>
+    <li class="img">
         <h2>${img.name}</h2>
         <figure>
             <img src="../uploads/${img.filename}" class="resp">
