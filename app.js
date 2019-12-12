@@ -2,17 +2,11 @@
 const express = require('express');
 const app = express();
 const port = 3000;
+const imgRoute = require('./routes/imgRoutes');
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
 
-app.get('/', (req, res) => {
-  res.send('This will be filled with pictures soon...');
-});
-
-app.post('/', (req, res) => {
-  res.send('With this endpoint you can add pictures')
-});
-
-app.delete('/', (req, res) => {
-  res.send('With this endpoint you can delete pictures')
-});
+app.use(express.static('uploads'));
+app.use("/img", imgRoute.router);
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
