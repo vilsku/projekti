@@ -8,16 +8,25 @@
 <body>
     <div class="container">
         <div id="navbar">
-        <a href="#home" id="logo">Foodgram</a>
-        <a href="#profile" id="prof" onclick="openNav()">Profile</a>
+        <a href="#home" id="logo" onclick="topFunction()">Foodgram</a>
         </div>
-        <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#">Profile</a>
-            <a href="#">Saved</a>
-            <a href="#">Settings</a>
+        <div>
+
         </div>
-        <div class="content">
+        <div class="addPicture">
+            <form action="http://localhost:3000/img"
+                  method="post"
+                  class="light-border"
+                  enctype="multipart/form-data"
+                  id="addImageForm">
+                <input class="light-border" type="file" name="image" placeholder="Choose file">
+                <button class="light-border" type="submit">Upload</button>
+                <input type="text" placeholder="name" name="name" required>
+                <h6>Tags</h6>
+                <input type="text" placeholder="tag" name="tag1" required>
+                <input type="text" placeholder="tag" name="tag2" required>
+                <input type="text" placeholder="tag" name="tag3" required>
+            </form>
         </div>
         <div class="row">
             <div class="column">
@@ -38,12 +47,9 @@
     </footer>
 
     <script>
-      function openNav() {
-        document.getElementById("mySidenav").style.width = "250px";
-      }
-
-      function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
+      function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
       }
     </script>
 </body>
