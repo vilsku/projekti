@@ -13,11 +13,9 @@ const getSearch = async () => {
     <li>
         <h2>${image.name}</h2>
         <figure>
-            <img src="../uploads/${image.filename}" class="resp">
+            <img src="../uploads/${image.filename}" class="flex-item">
         </figure>
-        <p class="tag">${image.tag1}</p>
-        <p class="tag">${image.tag2}</p>
-        <p class="tag">${image.tag3}</p>
+        <p class="tag">${image.tag1}</p> <p class="tag">${image.tag2}</p> <p class="tag">${image.tag3}</p>
     </li>
     `;
   }
