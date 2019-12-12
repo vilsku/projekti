@@ -34,13 +34,18 @@ const promisePool = pool.promise();
 const multer = require('multer');
 const upload = multer({dest: 'uploads/'});
 
-const img_get = async (req, res) => {
+const img_search_get = async (req, res) => {
   console.log('params', req.body);
-  const param = req.params.id;
+  const params =[
+      req.body.search,
+      req.body.search,
+      req.body.search,
+      req.body.search,
+  ];
   const img = async () => {
     try {
       const [rows] = await promisePool.execute(
-          'SELECT * FROM images WHERE img_id = ?;', [param]);
+          'SELECT * FROM images WHERE name = ? OR tag1 = ? OR tag2 = ? OR tag3 = ? ;', [params]);
       return rows;
     } catch (e) {
       console.log('error', e.message);
@@ -48,7 +53,7 @@ const img_get = async (req, res) => {
 
   };
   const result = await img();
-  await res.json(result);
+  return result;
 };
 const img_list_get = async (req, res) => {
   const imgs = async () => {
@@ -63,6 +68,8 @@ const img_list_get = async (req, res) => {
   await res.json(result);
 
 };
+
+
 const addImg = async (req, res) => {
   console.log(req.body);
   const params = [
@@ -103,7 +110,7 @@ const deleteImg = async (req, res) => {
 
 module.exports = {
   img_list_get,
-  img_get,
   addImg,
   deleteImg,
+  img_search_get,
 };

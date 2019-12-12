@@ -43,6 +43,9 @@ const upload = multer({storage: storage});
 router.get('/', (req, res)  =>  {
   imgController.img_list_get(req, res);
 });
+router.get('/search', (req, res)  =>  {
+  imgController.img_search_get(req, res);
+});
 router.get('/:id', (req, res) => {
   imgController.img_get(req, res)
 });

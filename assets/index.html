@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <title>Foodgram</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="container">
         <div id="navbar">
         <a href="#home" id="logo" onclick="topFunction()">Foodgram</a>
+            <form id="search" >
+                <input type="text" placeholder="Search.." name="search">
+                <p id="searchBtn">Search</p>
+            </form>
         </div>
         <div class="addPicture">
             <form action="http://localhost:3000/img"
@@ -23,6 +28,7 @@
                 <input type="text" placeholder="tag" name="tag1" required>
                 <input type="text" placeholder="tag" name="tag2" required>
                 <input type="text" placeholder="tag" name="tag3" required>
+                <button type="reset" >reset</button>
             </form>
         </div>
         <div>
