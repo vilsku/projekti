@@ -1,43 +1,24 @@
-'use strict';
+'use srict';
 const url = 'http://localhost:3000'; // change url when uploading to server
 
-// select existing html elements
-const addForm = document.querySelector('#addImageForm');
 const ul = document.querySelector('ul');
 
-// create cat cards
-const createImgCards = (images) => {
-  // clear ul
-  ul.innerHTML = '';
-  images.forEach((image) => {
-    // create li with DOM methods
-    const img = document.createElement('img');
-    img.src = url + '/' + image.filename;
-    img.alt = image.name;
-    img.classList.add('resp');
-
-    const figure = document.createElement('figure').appendChild(img);
-
-    const h2 = document.createElement('h2');
-    h2.innerHTML = image.name;
-
-    const li = document.createElement('li');
-    li.classList.add('light-border');
-
-    li.appendChild(h2);
-    li.appendChild(figure);
-    ul.appendChild(li);
-  });
-};
 
 const getImg = async () => {
-  try {
-    const response = await fetch(url + '/cat');
-    const cats = await response.json();
-    createImgCards(cats);
-  }
-  catch (e) {
-    console.log(e.message);
+  const response = await fetch(url + '/img');
+  const imgs = await response.json();
+  for (const img of imgs) {
+    ul.innerHTML += `
+    <li>
+        <h2>${img.name}</h2>
+        <figure>
+            <img src="../uploads/${img.filename}" class="resp">
+        </figure>
+        <p>${img.tag1}</p>
+        <p>${img.tag2}</p>
+        <p>${img.tag3}</p>
+    </li>
+    `;
   }
 };
 getImg();
