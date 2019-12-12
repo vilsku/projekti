@@ -7,59 +7,57 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div id="navbar">
+<div class="container">
+    <div id="navbar">
         <a href="#home" id="logo" onclick="topFunction()">Foodgram</a>
-            <form id="search" >
-                <input type="text" placeholder="Search.." name="search">
-                <p id="searchBtn">Search</p>
-            </form>
-        </div>
-        <div class="addPicture">
-            <form action="http://localhost:3000/img"
-                  method="post"
-                  class="light-border"
-                  enctype="multipart/form-data"
-                  id="addImageForm">
-                <input class="light-border" type="file" name="image" placeholder="Choose file">
-                <button class="light-border" type="submit">Upload</button>
-                <input type="text" placeholder="name" name="name" required>
-                <h6>Tags</h6>
-                <input type="text" placeholder="tag" name="tag1" required>
-                <input type="text" placeholder="tag" name="tag2" required>
-                <input type="text" placeholder="tag" name="tag3" required>
-                <button type="reset" >reset</button>
-            </form>
-        </div>
-        <div>
-            <ul>
-
-            </ul>
-        </div>
-        <!--<div class="row">
-            <div class="column">
-                <img src="img/kuva1.jpg" style="width: 100%;">
-                <img src="img/kuva2.jpg" style="width: 100%;">
-                <img src="img/kuva3.jpg" style="width: 100%;">
-            </div>
-            <div class="column">
-                <img src="img/kuva4.jpg" style="width: 100%;">
-                <img src="img/kuva5.jpg" style="width: 100%;">
-                <img src="img/kuva6.jpg" style="width: 100%;">
-            </div>
-        </div>-->
+        <input type="text" placeholder="Search.." name="search" id="search">
+        <button id="searchBtn">Search</button>
     </div>
+    <div class="addPicture">
+        <form action="http://localhost:3000/img"
+              method="post"
+              class="light-border"
+              enctype="multipart/form-data"
+              id="addImageForm">
+            <input class="light-border" type="file" name="image" placeholder="Choose file">
+            <button class="light-border" type="submit">Upload</button>
+            <input type="text" placeholder="name" name="name" required>
+            <h6>Tags</h6>
+            <input type="text" placeholder="tag" name="tag1" required>
+            <input type="text" placeholder="tag" name="tag2" required>
+            <input type="text" placeholder="tag" name="tag3" required>
+            <button type="reset">reset</button>
+        </form>
+    </div>
+    <div>
+        <ul>
 
-    <footer>
+        </ul>
+    </div>
+    <!--<div class="row">
+        <div class="column">
+            <img src="img/kuva1.jpg" style="width: 100%;">
+            <img src="img/kuva2.jpg" style="width: 100%;">
+            <img src="img/kuva3.jpg" style="width: 100%;">
+        </div>
+        <div class="column">
+            <img src="img/kuva4.jpg" style="width: 100%;">
+            <img src="img/kuva5.jpg" style="width: 100%;">
+            <img src="img/kuva6.jpg" style="width: 100%;">
+        </div>
+    </div>-->
+</div>
 
-    </footer>
+<footer>
 
-    <script>
-      function topFunction() {
+</footer>
+
+<script>
+    function topFunction() {
         document.body.scrollTop = 0; // For Safari
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-      }
-    </script>
-    <script src="js/main.js"></script>
+    }
+</script>
+<script src="js/main.js"></script>
 </body>
 </html>
