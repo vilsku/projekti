@@ -98,6 +98,15 @@ body {
     width: 200px;
     margin-top: 1%;
 }
+.tagContainer{
+    align-content: center;
+    text-align: center;
+}
+.tag{
+    display: inline;
+    width: auto;
+    text-align: center;
+}
 .row {
     margin-left: 15%;
     margin-right: 15%;
