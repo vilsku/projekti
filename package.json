@@ -668,7 +668,7 @@
       "resolved": "https://registry.npmjs.org/isexe/-/isexe-2.0.0.tgz",
       "version": "2.0.0"
     },
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "latest-version": {
       "integrity": "sha1-ogU4P+oyKzO1rjsYq+4NwvNW7hU=",
       "requires": {
